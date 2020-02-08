@@ -1,5 +1,10 @@
 import React, { useState } from "react";
 import "./App.css";
+import Container from "react-bootstrap/Container";
+import Button from "react-bootstrap/Button";
+import Form from "react-bootstrap/Form";
+import Row from "react-bootstrap/Row";
+import Col from "react-bootstrap/Col";
 import { mockAPI } from "./api";
 
 function App() {
@@ -33,20 +38,36 @@ function App() {
   };
 
   return (
-    <>
-      <form onSubmit={fetchForecastCity} className="App">
-        <label>City name</label>
-        <input
-          name="cityName"
-          data-cy="cityName"
-          onChange={handleChange}
-          type="text"
-        />
-        <input data-cy="submitCity" type="submit" value="Submit" />
-      </form>
+    <Container className="App">
+      <Row className="justify-content-center">
+        <Col sm={6}>
+          <Form onSubmit={fetchForecastCity} className="App">
+            <Form.Group as={Row} className="align-items-center">
+              <Form.Label column sm={3}>
+                City name
+              </Form.Label>
+              <Col sm={7}>
+                <Form.Control
+                  type="text"
+                  name="cityName"
+                  data-cy="cityName"
+                  onChange={handleChange}
+                  placeholder="Enter city"
+                />
+              </Col>
+              <Col sm={2}>
+                <Button variant="primary" data-cy="submitCity" type="submit">
+                  Submit
+                </Button>
+              </Col>
+            </Form.Group>
+          </Form>
+        </Col>
+      </Row>
+
       {Object.entries(weatherData).length !== 0 && (
         <div data-cy="weatherDisplay">
-          City: {weatherData.name}
+          <h2 className="city-heading">{weatherData.name}</h2>
           <ul>
             <li>Temp: {weatherData.main.temp}</li>
             <li>Feels like: {weatherData.main.feels_like}</li>
@@ -55,7 +76,7 @@ function App() {
         </div>
       )}
       {cityNotFound && <div>Sorry! City does not exist in database!</div>}
-    </>
+    </Container>
   );
 }
 

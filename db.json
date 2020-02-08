@@ -40,50 +40,7 @@
       },
       "timezone": 0,
       "id": 1,
-      "name": "London",
-      "cod": 200
-    },
-    {
-      "coord": {
-        "lon": -74.01,
-        "lat": 40.71
-      },
-      "weather": [
-        {
-          "id": 800,
-          "main": "Clear",
-          "description": "clear sky",
-          "icon": "01n"
-        }
-      ],
-      "base": "stations",
-      "main": {
-        "temp": -1.36,
-        "feels_like": -8.37,
-        "temp_min": -3.33,
-        "temp_max": 0.56,
-        "pressure": 1015,
-        "humidity": 54
-      },
-      "visibility": 16093,
-      "wind": {
-        "speed": 5.7,
-        "deg": 300
-      },
-      "clouds": {
-        "all": 1
-      },
-      "dt": 1581152192,
-      "sys": {
-        "type": 1,
-        "id": 4686,
-        "country": "US",
-        "sunrise": 1581163156,
-        "sunset": 1581200473
-      },
-      "timezone": -18000,
-      "id": 2,
-      "name": "New York City",
+      "name": "london",
       "cod": 200
     },
     {
@@ -126,7 +83,7 @@
       },
       "timezone": 3600,
       "id": 3,
-      "name": "Paris",
+      "name": "paris",
       "cod": 200
     },
     {
@@ -169,7 +126,7 @@
       },
       "timezone": 3600,
       "id": 4,
-      "name": "Amsterdam",
+      "name": "amsterdam",
       "cod": 200
     }
   ]
