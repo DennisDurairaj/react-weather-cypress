@@ -36,7 +36,11 @@ function App() {
     const newValue = evt.target.value;
     setInput({ ...input, [name]: newValue });
   };
-
+  
+  function capitalizeFirstLetter(string) {
+    return string[0].toUpperCase() + string.slice(1);
+  }
+  
   return (
     <Container className="App">
       <Row className="justify-content-center">
@@ -67,7 +71,7 @@ function App() {
 
       {Object.entries(weatherData).length !== 0 && (
         <div data-cy="weatherDisplay">
-          <h2 className="city-heading">{weatherData.name}</h2>
+          <h2>{capitalizeFirstLetter(weatherData.name)}</h2>
           <ul>
             <li>Temp: {weatherData.main.temp}</li>
             <li>Feels like: {weatherData.main.feels_like}</li>
