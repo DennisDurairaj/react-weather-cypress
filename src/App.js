@@ -79,7 +79,7 @@ function App() {
           </ul>
         </div>
       )}
-      {cityNotFound && <div>Sorry! City does not exist in database!</div>}
+      {cityNotFound && <div data-cy="notFound">Sorry! City does not exist in database!</div>}
     </Container>
   );
 }
